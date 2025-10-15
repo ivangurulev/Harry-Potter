@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter's houses</title>
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <section class="section">
+      <h1 class="title potter-font has-text-centered">Harry Potter</h1>
+      <div id="houses" class="content is-flex is-flex-direction-column"></div>
+
+      <template id="accordion-template">
+        <div class="column is-align-self-center">
+          <details class="box">
+            <summary class="house-name has-text-centered is-size-3">
+              Gryffindor
+            </summary>
+            <p class="house-founder house-info"></p>
+            <p class="house-ghost house-info"></p>
+            <p class="house-animal house-info"></p>
+          </details>
+        </div>
+      </template>
+    </section>
+  </body>
+</html>
+
+<!-- добавить фавиконку -->

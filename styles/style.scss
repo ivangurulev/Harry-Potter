@@ -1,0 +1,43 @@
+html {
+  background-color: #090610;
+}
+
+.title {
+  font-family: "HarryP", sans-serif;
+  font-size: 7rem;
+  font-weight: 400;
+}
+
+#houses {
+  gap: 2.5rem;
+  div {
+    font-family: "Csartemiodrawn", sans-serif;
+  }
+}
+
+.column {
+  max-width: 720px;
+  width: 100%;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.box {
+  text-align: center;
+  padding: 0;
+}
+
+.house-info {
+  font-size: 1.1rem;
+}
+
+/* Transition для анимации высоты */
