@@ -1,5 +1,5 @@
-html {
-  background-color: #090610;
+body {
+  background-image: linear-gradient(#121230, #030308);
 }
 
 .title {
@@ -25,10 +25,35 @@ summary {
   cursor: pointer;
   color: #fff;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
+  position: relative;
+  // overflow: hidden;
 }
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #7390D9;
+  transform: scaleX(0);
+  transition: transform 0.6s ease-in-out;
+  transform-origin: left;
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: inherit;
+  // clip-path: inset(0 round 0.75rem);
+  border-radius: 0.75rem;
+}
+
+summary:hover::before {
+  transform: scaleX(1);
+}
+
+.house-name {
+  z-index: 1;
 }
 
 .box {
@@ -39,4 +64,9 @@ summary::-webkit-details-marker {
 .house-info {
   font-size: 1.1rem;
 }
+
+.section {
+  min-height: 100vh;
+}
+
 

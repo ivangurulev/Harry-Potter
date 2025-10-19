@@ -1,6 +1,6 @@
-@charset "UTF-8";
-html {
-  background-color: #090610;
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#121230), to(#030308));
+  background-image: linear-gradient(#121230, #030308);
 }
 
 .title {
@@ -26,11 +26,39 @@ summary {
   cursor: pointer;
   color: #fff;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
-  font-family: "Csartemiodrawn", sans-serif;
+  position: relative;
 }
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+summary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #7390D9;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  z-index: -1;
+  opacity: 0.4;
+  border-radius: inherit;
+  border-radius: 0.75rem;
+}
+
+summary:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.house-name {
+  z-index: 1;
 }
 
 .box {
@@ -40,4 +68,8 @@ summary::-webkit-details-marker {
 
 .house-info {
   font-size: 1.1rem;
+}
+
+.section {
+  min-height: 100vh;
 }

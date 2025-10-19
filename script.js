@@ -13,6 +13,7 @@ axios.get('https://wizard-world-api.herokuapp.com/Houses')
             accordionElement.querySelector('.house-founder').textContent = `Основатель - ${house.founder}`;
             accordionElement.querySelector('.house-ghost').textContent = `Призрак - ${house.ghost}`;
             accordionElement.querySelector('.house-animal').textContent = `Символ - ${house.animal}`;
+            accordionElement.querySelector('.house-image').setAttribute('src', `images/${house.name}.png`)
             root.appendChild(accordionElement);
         })
      });
