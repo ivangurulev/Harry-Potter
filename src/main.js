@@ -1,3 +1,8 @@
+import axios from 'axios'
+import 'bulma/css/bulma.min.css';
+import './fonts/fonts.css';
+import './styles/style.scss';
+
 const root = document.querySelector('#houses');
 const accordionTemplate = document.querySelector('#accordion-template').content;
 
@@ -13,7 +18,7 @@ axios.get('https://wizard-world-api.herokuapp.com/Houses')
             accordionElement.querySelector('.house-founder').textContent = `Основатель - ${house.founder}`;
             accordionElement.querySelector('.house-ghost').textContent = `Призрак - ${house.ghost}`;
             accordionElement.querySelector('.house-animal').textContent = `Символ - ${house.animal}`;
-            accordionElement.querySelector('.house-image').setAttribute('src', `images/${house.name}.png`)
+            accordionElement.querySelector('.house-image').setAttribute('src', `/images/${house.name}.avif`)
             root.appendChild(accordionElement);
         })
      });

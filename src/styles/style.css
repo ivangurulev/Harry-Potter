@@ -1,5 +1,4 @@
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#121230), to(#030308));
   background-image: linear-gradient(#121230, #030308);
 }
 
@@ -38,14 +37,9 @@ summary::before {
   position: absolute;
   inset: 0;
   background-color: #7390D9;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 0.6s ease-in-out;
-  transition: -webkit-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center;
   z-index: -1;
   opacity: 0.4;
   border-radius: inherit;
@@ -53,8 +47,7 @@ summary::before {
 }
 
 summary:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scale(1);
 }
 
 .house-name {
@@ -73,3 +66,5 @@ summary:hover::before {
 .section {
   min-height: 100vh;
 }
+
+
